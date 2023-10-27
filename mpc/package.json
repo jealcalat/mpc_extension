@@ -1,0 +1,25 @@
+{
+  "name": "mpc",
+  "displayName": "MPC",
+  "description": "Med Notation System",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mpc",
+      "aliases": ["Med State Notation ", "mpc", "MPC"],
+      "extensions": [".mpc",".MPC"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mpc",
+      "scopeName": "source.mpc",
+      "path": "./syntaxes/mpc.tmLanguage.json"
+    }]
+  }
+}

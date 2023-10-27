@@ -1,0 +1,84 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Med State Notation ",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.mpc",
+					"match": "(?i)\\b(if|while|for|return)\\b"
+				},
+				{
+					"name": "keyword.transition.mpc",
+					"match": "--->"
+				},
+				{
+					"name": "keyword.reserved.time.mpc",
+					"match": "[\"'=#+*/-]|#"
+				},
+				{
+					"name": "keyword.z.mpc",
+					"match": "(?i)\\bz[1-9]\\b|\\bz[1-3][0-9]\\b|\\bz40\\b"
+				},
+				{
+					"name": "keyword.s.mpc",
+					"match": "(?i)\\bs[1-9]\\b|\\bs[1-9][0-9]\\b|\\bs20\\b"
+				},
+				{
+					"name": "keyword.ss.mpc",
+					"match": "(?i)\\bs\\.s\\.[1-9]\\b|\\bs\\.s\\.[1-9][0-9]\\b"
+				},
+				{
+					"name": "keyword.special.mpc",
+					"match": "(?i)\\b(add|show|randd|list|dim|start|stopsave|set|on|off)\\b"
+				},
+				{
+					"name": "comment.line.backslash.mpc",
+					"match": "\\\\.*$"
+				}, 
+				{
+					"name": "keyword.numeric.mpc",
+					"match": "\\b\\d+(\\.\\d+)?\\b"
+				},
+				{
+					"name": "keyword.logical.mpc",
+					"match": "@[a-zA-Z_][a-zA-Z0-9_]*|>|<|==|>=|<="
+				},
+				{
+					"name": "single.letter.mpc",
+					"match": "\\b[a-zA-Z]\\b"
+				},
+				{
+					"name": "keyword.interruptor.mpc",
+					"match": "\\b(?=.{2,}|\\^)[a-zA-Z_]+\\^?[a-zA-Z_]*\\b"
+				},
+				{
+					"name": "missing.space.after.mpc",
+					"match": ":[^ ]|--->[^ ]|=[^ ]"
+				},
+				{
+					"name": "missing.linebreak.after.semicolon.mpc",
+					"match": ";[^\\n]"
+			}
+			
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.backslash.mpc",
+					"match": "\\\\.*$"
+				}
+			]
+		}
+	},
+	"scopeName": "source.mpc"
+}
